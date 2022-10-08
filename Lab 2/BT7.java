@@ -37,7 +37,7 @@ public class BT7 {
             System.out.println("Thời gian nhanh hơn 1 giây là: 00:00:01");
             }
             else if ((Giay == 0) && (Phut == 0)) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + "00:00");
+            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":00:00");
             System.out.println("Thời gian chậm hơn 1 giây là: " + (Gio - 1) + ":59:59");
             System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":01:01");
             }
