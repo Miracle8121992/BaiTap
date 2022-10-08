@@ -15,6 +15,8 @@ public class BT7 {
 
         if (((Gio > 0) && (Gio < 23)) && ((Phut > 0) && (Phut < 59)) && ((Giay > 0) && (Giay < 59))) {
             System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":" + Phut + ":" + Giay);
+            System.out.println("Thời gian chậm hơn 1 giây là: " + Gio + ":" + Phut + ":" + (Giay -1));
+            System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":" + (Phut + 1) + ":" + (Giay +1));
         }
             else if ((Gio == 23) && (Giay == 59) && (Phut == 59)) {
             System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: 23:59:59");
