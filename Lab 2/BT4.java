@@ -20,9 +20,13 @@ public class BT4 {
             case 4, 6, 9, 11 -> System.out.println("Số ngày trong tháng là 30");
             case 2 -> {
                 if (year % 4 == 0) {
-                    yearLeap = year % 100 != 0;
+                    if (year % 100 != 0)
+                        yearLeap = true;
+                    else yearLeap = false;
+
                 }
                 if (year % 400 == 0) yearLeap = true;
+
                 if (yearLeap)
                     System.out.println("Số ngày trong tháng là 29");
                 else
