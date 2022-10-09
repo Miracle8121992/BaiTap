@@ -2,54 +2,70 @@ import java.util.Scanner;
 
 public class BT7 {
     public static void main(String[] args) {
+        int hour = 1;
+        int minute = 1;
+        int second = 1;
+
+        boolean isHour = (hour >= 0 && hour <= 24);
+        boolean isMinute = (minute >= 0 && minute <= 60);
+        boolean isSecond = (second >= 0 && second <= 60);
+
+        boolean isTimeValid = false;
+
         Scanner sc = new Scanner(System.in);
+        System.out.print("Input hour: ");
+        hour = sc.nextInt();
 
-        System.out.print("Nhập số thứ nhất: ");
-        int Gio = sc.nextInt();
+        System.out.print("Input minute : ");
+        minute = sc.nextInt();
 
-        System.out.print("Nhập số thứ hai: ");
-        int Phut = sc.nextInt();
+        System.out.print("Input second: ");
+        second = sc.nextInt();
 
-        System.out.print("Nhập số thứ ba: ");
-        int Giay = sc.nextInt();
 
-        if (((Gio > 0) && (Gio < 23)) && ((Phut > 0) && (Phut < 59)) && ((Giay > 0) && (Giay < 59))) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":" + Phut + ":" + Giay);
-            System.out.println("Thời gian chậm hơn 1 giây là: " + Gio + ":" + Phut + ":" + (Giay -1));
-            System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":" + (Phut + 1) + ":" + (Giay +1));
+        if (isHour && isMinute && isSecond) {
+            isTimeValid = true;
         }
-            else if ((Gio == 23) && (Giay == 59) && (Phut == 59)) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: 23:59:59");
-            System.out.println("Thời gian chậm hơn 1 giây là: 23:59:58");
-            System.out.println("Thời gian nhanh hơn 1 giây là: 00:00:00");
-            }
-            else if ((Giay == 59) && (Phut == 59)) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":59:59");
-            System.out.println("Thời gian chậm hơn 1 giây là: " + Gio + ":59:58");
-            System.out.println("Thời gian nhanh hơn 1 giây là: " + (Gio + 1) + ":00:00");
-            }
-            else if (Giay == 59) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":" + Phut + ":59");
-            System.out.println("Thời gian chậm hơn 1 giây là: " + Gio + ":" + Phut + ":58");
-            System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":" + (Phut + 1) + ":00");
-            }
-            else if ((Gio == 0) && (Giay == 0) && (Phut == 0)) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: 00:00:00");
-            System.out.println("Thời gian chậm hơn 1 giây là: 23:59:59");
-            System.out.println("Thời gian nhanh hơn 1 giây là: 00:00:01");
-            }
-            else if ((Giay == 0) && (Phut == 0)) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":00:00");
-            System.out.println("Thời gian chậm hơn 1 giây là: " + (Gio - 1) + ":59:59");
-            System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":01:01");
-            }
-            else if (Giay == 0) {
-            System.out.println("Ba số bạn vừa nhập là thời gian hợp lệ: " + Gio + ":" + Phut + ":00");
-            System.out.println("Thời gian chậm hơn 1 giây là: " + (Gio - 1) + ":" + (Phut - 1) + ":" + "59");
-            System.out.println("Thời gian nhanh hơn 1 giây là: " + Gio + ":" + Phut + ":01");
-            }
-        else {
-            System.out.print("Ba số bạn vừa nhập không phải là thời gian hợp lệ");
+
+        switch (second) {
+            case 59:
+                if (minute == 59) {
+                    if (hour == 23) {
+                        System.out.println("Time increase 1 second is : 00:00:00");
+                        System.out.println("Time decrease 1 second is : 23:59:58");
+                    } else {
+                        System.out.println("Time increase 1 second is :" + (hour+1) + ":00:00");
+                        System.out.println("Time decrease 1 second is :" + hour + ":59:58");
+                    }
+                } else {
+                    System.out.println("Time increase 1 second is :" + hour + ":" + (minute+1) + ":00");
+                    System.out.println("Time decrease 1 second is :" + hour + ":" + minute + ":58");
+                }
+                break;
+            case 0:
+                if (minute == 0) {
+                    if (hour == 0) {
+                        System.out.println("Time increase 1 second is : 00:00:01");
+                        System.out.println("Time decrease 1 second is : 23:59:59");
+                    } else {
+                        System.out.println("Time increase 1 second is :" + hour + ":00:01");
+                        System.out.println("Time decrease 1 second is :" + (hour-1) + ":59:59");
+                    }
+                } else {
+                    System.out.println("Time increase 1 second is :" + hour + ":" + minute + ":01");
+                    System.out.println("Time decrease 1 second is :" + hour + ":" + (minute-1) + ":59");
+                }
+                break;
+
+            default:
+                System.out.println("Time increase 1 second is :" + hour + ":" + minute + ":" + (second + 1));
+                System.out.println("Time decrease 1 second is :" + hour + ":" + minute + ":" + (second - 1));
         }
+
+        if (isTimeValid)
+            System.out.println("Time is :" + hour + ":" + minute + ":" + second);
+        else
+            System.out.println("Invalid time format");
+
     }
 }
