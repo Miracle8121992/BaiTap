@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class BT4YC1 {
+    public static void main(String[] args) {
+        int price = 10;
+        int buy = 1;
+        int guess = 10;
+        boolean r = false;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Guess a price: ");
+        buy = sc.nextInt();
+
+        if  (buy > price) {
+            System.out.println("The real price is higher than the price you guess :");
+            System.out.print("Guess another price: ");
+            buy = sc.nextInt();
+            r = false;
+        }
+        if (buy < price) {
+            System.out.println("The real price is lower than the price you guess :");
+            System.out.print("Guess another price: ");
+            buy = sc.nextInt();
+            r = false;
+        }
+        for (r =false; guess >= 1; guess--  );
+
+        if(buy == price) {
+            System.out.println("Exactly!");
+            System.out.println("Number of incorrectly guess is: " +( 10  - guess));
+
+        }
+    }
+}
