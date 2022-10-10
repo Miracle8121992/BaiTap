@@ -16,6 +16,6 @@ public class BT2YC3 {
             }
             i++;
         }
-        System.out.print("so luong so chia het cho 3 va 7 la: " + s);
+        System.out.print("So luong so chia het cho 3 va 7 trong khoang tu 1 toi " + n + " la: " + s);
     }
 }
