@@ -17,7 +17,7 @@ public class BT4YC1 {
             System.out.print("Guess another price: ");
             buy = sc.nextInt();
             guess = guess - 1;
-            if (guess == 1) {
+            if (guess == 0) {
                 System.out.println("You lose!"); break;
             }
         }
@@ -26,7 +26,7 @@ public class BT4YC1 {
             System.out.print("Guess another price: ");
             buy = sc.nextInt();
             guess = guess - 1;
-            if (guess == 1) {
+            if (guess == 0) {
                 System.out.println("You lose!"); break;
 
             }
