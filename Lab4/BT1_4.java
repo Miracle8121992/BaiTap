@@ -9,7 +9,7 @@ public class BT1_4 {
             }
         }
         System.out.println("Mang sau khi thay doi: ");
-        for(int i=0;i<15;i++)
+        for( i=0 ; i<15 ; i++)
             System.out.print("\t"+array[i]);
     }
 }
