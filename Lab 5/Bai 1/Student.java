@@ -20,7 +20,7 @@ public class Student {
 
     //method show student info
     public void sayHello() {
-        String info = String.format("Hello! I am %s , ID number: %d \n", name, id);
+        String info = String.format("Hello! I am %s, ID number: %d \n", name, id);
         System.out.print(info);
     }
 }
