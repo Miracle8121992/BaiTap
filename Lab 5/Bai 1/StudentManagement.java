@@ -11,17 +11,20 @@ public class StudentManagement {
         student1.setName(sc.nextLine());
         System.out.print("Nhap ma so sinh vien 1: ");
         student1.setId(sc.nextInt());
-
+        sc.nextLine();
+        
         System.out.print("Nhap ten sinh vien 2: ");
         student2.setName(sc.nextLine());
         System.out.print("Nhap ma so sinh vien 2: ");
         student2.setId(sc.nextInt());
-
+        sc.nextLine();
+        
         System.out.print("Nhap ten sinh vien 3: ");
         student3.setName(sc.nextLine());
         System.out.print("Nhap ma so sinh vien 3: ");
         student3.setId(sc.nextInt());
-
+        sc.nextLine();
+        
         student1.sayHello();
         student2.sayHello();
         student3.sayHello();
