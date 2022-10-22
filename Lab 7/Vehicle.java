@@ -1,0 +1,81 @@
+package Lab7;
+
+public class Vehicle {
+    private String nameOwner, nameCar;
+    private int dungTich;
+    private float price;
+
+    public Vehicle (){
+    }
+    public Vehicle (String nameOwner, String nameCar, int dungTich, float price){
+    }
+
+    public float ThueTruocBa() {
+
+        if (getDungTich() < 100) {
+            return ((1 / 100) * price);
+        }
+            if (getDungTich() < 200) {
+                return ((3 / 100) * price);
+            }
+            else {
+            return ((5 / 100) * price);
+        }
+
+    }
+
+    public void setNameOwner(String nameOwner) {
+        if (nameOwner == null || nameOwner.isEmpty())
+            // Nếu biến ten chưa khởi tạo (mang giá trị null), hoặc biến ten có nội dung rỗng
+            // Thì hãy lưu với tên là "Không biết"
+            this.nameOwner = "Không biết";
+         else
+            this.nameOwner = nameOwner;
+    }
+
+    public void setNameCar(String nameCar) {
+        if (nameCar == null || nameCar.isEmpty())
+            this.nameCar = "Không biết";
+        else
+            this.nameCar = nameCar;
+
+    }
+
+    public void setPrice(float price) {
+        if (price < 0)
+            this.price = 0;
+        else
+            this.price = price;
+    }
+
+    public void setDungTich(int dungTich) {
+        if (dungTich < 0)
+            this.dungTich = 0;
+        else
+            this.dungTich = dungTich;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public int getDungTich() {
+        return dungTich;
+    }
+
+    public String getNameCar() {
+        return nameCar;
+    }
+
+    public String getNameOwner() {
+        return nameOwner;
+    }
+
+    public void hienThiThongTin() {
+        System.out.println("Ten xe: " + getNameCar());
+        System.out.println("Ten chu xe: " + this.nameOwner);
+        System.out.println("Dung tich : " + this.dungTich);
+        System.out.println("Gia: " + this.price);
+    }
+}
+
