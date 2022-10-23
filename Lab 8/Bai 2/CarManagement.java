@@ -12,8 +12,8 @@ public class CarManagement {
         c2.getInfor();
         c3.getInfor();
 
-        System.out.println("Thue xe i10 la: " + c1.calculateTax());
-        System.out.println("Thue xe Lux la: " + c2.calculateTax());
-        System.out.println("Thue xe Honda la: " + c3.calculateTax());
+        System.out.println("Thue xe " + c1.getName() + " la: " + c1.calculateTax());
+        System.out.println("Thue xe " + c2.getName() + " la: " + c2.calculateTax());
+        System.out.println("Thue xe " + c3.getName() + " la: " + c3.calculateTax());
     }
 }
