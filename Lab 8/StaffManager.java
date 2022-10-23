@@ -23,17 +23,6 @@ public class StaffManager {
                     s1[i] = new Marketing();
                 }
 
-                //s1[i].nhapDS();
-                s1[i].tinhLuong();
-
-            }
-        }
-        public void xuatDS() {
-            System.out.println("Thông tin của các nhân viên trong công ty: ");
-           // for (int i = 0; i < soNhanVien; i++) {
-                //System.out.println(s1[i].xuatThongTinNV());
-            }
-        }
-
+                
   //  }
 //}
