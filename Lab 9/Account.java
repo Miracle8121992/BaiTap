@@ -108,7 +108,7 @@ public class Account implements IActionable {
             } else System.out.println("Your account ID does not exist");
         } catch (InputMismatchException e)  {
             System.out.println("Invalid number! error: " + e.toString());
-        } if (depositMoney <= 0) throw new InputMismatchException("Deposit must > 0");
+        }
     }
     @Override
     public void withdraw() {
